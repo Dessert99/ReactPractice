@@ -1,0 +1,26 @@
+#root {
+  width: 100%;
+}
+
+.no1_inner {
+  padding: 16px;
+  width: 7000px;
+  overflow: hidden;
+}
+
+.no1_title {
+  display: flex;
+  gap: 15px;
+}
+.no1_wrap {
+  display: flex;
+}
+
+span {
+  display: block;
+}
+
+img {
+  width: 400px;
+  margin-top: 5px;
+}
