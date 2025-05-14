@@ -1,15 +1,16 @@
-#root {
-  width: 100%;
-}
+//외부에서 폰트 가져오기
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
 
 .no1_inner {
   padding: 16px;
   width: 7000px;
   overflow: hidden;
+  width: 100%;
 }
 
 .no1_title {
   display: flex;
+  align-items: center;
   gap: 15px;
 }
 .no1_wrap {
@@ -18,9 +19,13 @@
 
 span {
   display: block;
+  font-size: 30px;
+  font-family: 'Single Day', cursive;
+  font-weight: bold;
 }
 
 img {
-  width: 400px;
+  width: 45vw; //현재 브라우저 너비의 50%
+  height: 45vw;
   margin-top: 5px;
 }

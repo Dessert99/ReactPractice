@@ -1,0 +1,19 @@
+import React from 'react';
+import LinkButton from '../../components/LinkButton';
+
+const No2 = () => {
+  return (
+    <>
+      <div className="no2_header">
+        <div className="no2_title">
+          <h2>두 번째 기능입니다</h2>
+          <LinkButton to="/">홈으로 가기</LinkButton>
+        </div>
+        <h3>리액트로 다양한 방법으로 토글 기능을 만들어 보자.</h3>
+      </div>
+      <div className="no2_main"></div>
+    </>
+  );
+};
+
+export default No2;

@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import No1 from './views/no_1/No1';
-import No2 from './views/No2';
+import No2 from './views/no_2/No2';
 import Home from './views/Home';
 
 function App() {
