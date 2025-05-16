@@ -1,6 +1,7 @@
 import { React } from 'react';
 import LinkButton from '../../components/LinkButton';
-import No2useState from './No2useState';
+import No2useState1 from './No2useState1';
+import No2useState2 from './No2useState2';
 
 const No2 = () => {
   return (
@@ -16,7 +17,8 @@ const No2 = () => {
       <div className="no2_main">
         <div className="toggle1">
           <p>1. useState를 사용하여 토글 기능 만들기</p>
-          <No2useState />
+          <No2useState1 />
+          <No2useState2 />
         </div>
         <hr />
         <div className="toggle2">

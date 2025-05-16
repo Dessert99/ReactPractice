@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const No2useState = () => {
+const No2useState1 = () => {
   const [isOpen, setIsOpen] = useState(false); //처음에는 닫혀있어야 해서 false로 설정.
 
   //토글 함수
@@ -23,8 +23,9 @@ const No2useState = () => {
         <h1>버튼을 클릭하시오!</h1>
         <button onClick={handleToggle}>{isOpen ? '닫기' : '열기'}</button>
       </div>
+
       {isOpen && ( //조건부 렌더링
-        <p
+        <div
           style={{
             margin: '0px', // margin을 없애야 바로 밑에 생성된다.
             display: 'flex',
@@ -36,10 +37,11 @@ const No2useState = () => {
           }}
         >
           <h1>토글 연습 중입니다.</h1>
-        </p>
+        </div>
       )}
+      <br />
     </>
   );
 };
 
-export default No2useState;
+export default No2useState1;
