@@ -14,13 +14,22 @@ const KakaoMap = () => {
   const loadMap = () => {
     window.kakao.maps.load(() => {
       const { kakao } = window;
-      const container = document.getElementById('map');
+      const container = document.getElementById('map'); //지도를 표시할 div
       const options = {
-        center: new kakao.maps.LatLng(33.450701, 126.570667),
-        level: 3,
+        center: new kakao.maps.LatLng(37.5961657, 127.0635885), // 지도의 중심 좌표
+        level: 3, //지도 확대 레벨
       };
-      const map = new kakao.maps.Map(container, options);
-      console.log(map);
+      const map = new kakao.maps.Map(container, options); // 지도 생성
+
+      // 마커를 생성할 위치
+      let markerPosition = new kakao.maps.LatLng(37.595869, 127.058712);
+
+      // 마커 생성
+      let marker = new kakao.maps.Marker({
+        position: markerPosition,
+      });
+
+      marker.setMap(map);
     });
   };
 
