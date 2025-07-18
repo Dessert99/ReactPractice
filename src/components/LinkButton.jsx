@@ -1,10 +1,16 @@
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+
+const MoveButton = styled.button`
+  width: 100px;
+  height: 50px;
+`;
 
 const LinkButton = ({ to, children }) => {
   return (
     <div>
       <Link to={to}>
-        <button>{children}</button>
+        <MoveButton>{children}</MoveButton>
       </Link>
     </div>
   );
