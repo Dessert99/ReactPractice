@@ -1,7 +1,7 @@
-import { React, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
+import './_no1.scss';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import LinkButton from '../../components/LinkButton';
 import cat1 from './img/cat1.jpg';
 import cat2 from './img/cat2.jpg';
 import cat3 from './img/cat3.jpg';
@@ -90,7 +90,6 @@ const No1 = () => {
       <div className="no1_inner">
         <div className="no1_title">
           <h1>첫 번째 기능 : 가로 스크롤 </h1>
-          <LinkButton to="/">홈으로 가기</LinkButton>
         </div>
         <div className="no1_wrap" ref={horizontalRef}>
           {No1Text.map((obj, key) => (
