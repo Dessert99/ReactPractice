@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import KakaoMap from './KakaoMap';
+import Kakao from './Kakao';
 
 const Title = styled.h1`
   text-align: center;
@@ -8,8 +8,8 @@ const Title = styled.h1`
 const No3 = () => {
   return (
     <>
-      <Title>카카오맵 API</Title>
-      <KakaoMap />
+      <Title> 세 번째 기능 : 카카오맵 API</Title>
+      <Kakao />
     </>
   );
 };
