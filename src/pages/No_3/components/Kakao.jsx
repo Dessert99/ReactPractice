@@ -1,5 +1,6 @@
-import { Map, MapMarker, Polyline } from 'react-kakao-maps-sdk';
+import { Map, MapMarker, Polyline, MapTypeControl, ZoomControl } from 'react-kakao-maps-sdk';
 import styled from 'styled-components';
+import MapController from '../MapController';
 
 const StyledMap = styled(Map)`
   width: 60%;
@@ -7,14 +8,16 @@ const StyledMap = styled(Map)`
   border-radius: 20px;
 `;
 
-const Kakao = ({ center, level, markers, path }) => {
+const Kakao = ({ center, level, markers, path, setCenter, setMarkers, setPath }) => {
   return (
     <StyledMap center={center} level={level}>
       {markers.map((position, key) => (
         <MapMarker key={key} position={{ lat: position.lat, lng: position.lng }} />
       ))}
-
-      <Polyline path={[path]} strokeWeight={5} strokeColor={'blue'} strokeStyle={'solid'} />
+      <Polyline path={path} strokeWeight={5} strokeColor={'blue'} strokeStyle={'solid'} />
+      <MapTypeControl position={'TOPRIGHT'} />
+      <ZoomControl position={'RIGHT'} />
+      <MapController setCenter={setCenter} setMarkers={setMarkers} setPath={setPath} />
     </StyledMap>
   );
 };
