@@ -13,8 +13,10 @@ const ButtonPennel = styled.div`
   height: 5rem;
 `;
 
-const MapController = ({ setCenter, setMarkers, setPath }) => {
+const MapController = ({ setCenter, setMarkers, setPath, center }) => {
+  // 지도 범위 조작을 위한 map 객체
   const map = useMap();
+
   //초기화
   const resetMap = () => {
     setCenter({ lat: 37.59607, lng: 127.058737 });
@@ -22,9 +24,29 @@ const MapController = ({ setCenter, setMarkers, setPath }) => {
     setPath([]);
   };
 
-  //위치 이동하기 : 경희대
-  const moveTo = () => {
-    setCenter({ lat: 37.5944, lng: 127.0509 });
+  // 현재 위치로 이동
+  const myPos = () => {
+    const { geolocation } = navigator;
+    const handleSuccess = (pos) => {
+      const { latitude, longitude } = pos.coords;
+
+      setCenter({
+        'lat': latitude,
+        'lng': longitude,
+      });
+    };
+
+    const handleError = (error) => {
+      console.error(error.message);
+    };
+    const options = {
+      enableHighAccuracy: false,
+      timeout: 5000,
+      maximumAge: 0,
+    };
+
+    geolocation.getCurrentPosition(handleSuccess, handleError, options);
+    console.log(center);
   };
 
   //여러 개 마킹하기 : 외대~경희대
@@ -41,7 +63,7 @@ const MapController = ({ setCenter, setMarkers, setPath }) => {
   const drawingTrail = async () => {
     try {
       const data = await trailService();
-      let path = data[0].routes.map(({ lat, lng }) => ({ lat, lng }));
+      let path = data[4].routes;
       setPath(path);
 
       const resetBounds = (path) => {
@@ -63,7 +85,7 @@ const MapController = ({ setCenter, setMarkers, setPath }) => {
     <>
       <ButtonPennel>
         <Button onClick={resetMap}>초기화</Button>
-        <Button onClick={moveTo}>위치 이동하기</Button>
+        <Button onClick={myPos}>현재 위치로 이동</Button>
         <Button onClick={markingMap}>한 번에 여러 개 마킹하기</Button>
         <Button onClick={drawingTrail}>산책로 그리기</Button>
       </ButtonPennel>
