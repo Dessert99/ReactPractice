@@ -22,4 +22,12 @@ K-HTML 해커톤 서비스에 사용할 지도를 카카오맵 API를 사용해�
 
 <img width="1735" height="748" alt="image" src="https://github.com/user-attachments/assets/afe30352-aa44-4428-a68a-562801587cb5" />
 
-## No4) Jest
+## No4) Open AI 기반 챗봇 구현  
+
+멋쟁이사자처럼 중앙해커톤 서비스에 활용할 AI 챗봇을 구현했다.  
+@chatscope/chat-ui-kit-react를 사용해 채팅 UI를 구성하고, OpenAI API 키를 발급받아 연동하였다.  
+또한, 채팅 기록을 로컬스토리지에 저장해 브라우저 탭을 닫아도 대화 내용이 유지되도록 구현하였다.  
+
+![ijoji](https://github.com/user-attachments/assets/fd892e73-a29b-4d0f-8518-7561dae96bad)
+
+  
