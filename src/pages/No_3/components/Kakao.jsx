@@ -2,6 +2,7 @@ import { Map, MapMarker, Polyline, MapTypeControl, ZoomControl } from 'react-kak
 import styled from 'styled-components';
 import MapController from '../MapController';
 import { useState } from 'react';
+import redIcon from '../assets/red.png';
 
 const StyledMap = styled(Map)`
   width: 90%;
@@ -29,13 +30,31 @@ const Kakao = () => {
         }
         console.log(trail);
       }}>
-      {markers.map((position, key) => (
-        <MapMarker key={key} position={{ lat: position.lat, lng: position.lng }} />
-      ))}
+      {markers.map((pos, key) => {
+        const { id, lat, lng } = pos;
+        return (
+          <MapMarker
+            key={key}
+            position={{ lat: lat, lng: lng }}
+            clickable={true}
+            onClick={() => console.log(id)}
+            image={{
+              src: redIcon,
+              size: {
+                width: 20,
+                height: 20,
+              },
+
+              options: {
+                offset: { x: 10, y: 10 }, // offset은 마커 이미지 안에서 “지도상의 좌표(lat, lng)”가 맞닿는 지점을 어디로 할지 지정한다.
+              },
+            }}
+          />
+        );
+      })}
       <Polyline path={path} strokeWeight={5} strokeColor={'blue'} strokeStyle={'solid'} />
       <MapTypeControl position={'TOPRIGHT'} />
       <ZoomControl position={'RIGHT'} />
-      <MapMarker position={center} />
       <MapController setCenter={setCenter} setMarkers={setMarkers} setPath={setPath} center={center} />
     </StyledMap>
   );

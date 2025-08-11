@@ -34,6 +34,8 @@ const MapController = ({ setCenter, setMarkers, setPath, center }) => {
         'lat': latitude,
         'lng': longitude,
       });
+      const data = { id: 1, name: '센터', lat: latitude, lng: longitude };
+      setMarkers([data]);
     };
 
     const handleError = (error) => {
@@ -46,7 +48,6 @@ const MapController = ({ setCenter, setMarkers, setPath, center }) => {
     };
 
     geolocation.getCurrentPosition(handleSuccess, handleError, options);
-    console.log(center);
   };
 
   //여러 개 마킹하기 : 외대~경희대
