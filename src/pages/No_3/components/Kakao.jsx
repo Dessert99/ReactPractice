@@ -16,6 +16,20 @@ const Kakao = () => {
   const [markers, setMarkers] = useState([]);
   const [path, setPath] = useState([]);
   const [trail, setTrail] = useState([]);
+
+  // 좌표-> 주소 변환 핸들러
+  const handleGeocoder = (lat, lng) => {
+    const geocoder = new window.kakao.maps.services.Geocoder();
+    let callback = (result, status) => {
+      if (status === window.kakao.maps.services.Status.OK) {
+        const { road_address, address } = result[0];
+        const addr = road_address?.address_name || address?.address_name; //도로명 우선
+        console.log(addr);
+      }
+    };
+    geocoder.coord2Address(lng, lat, callback);
+  };
+
   return (
     <StyledMap
       center={center}
@@ -31,13 +45,13 @@ const Kakao = () => {
         console.log(trail);
       }}>
       {markers.map((pos, key) => {
-        const { id, lat, lng } = pos;
+        const { lat, lng } = pos;
         return (
           <MapMarker
             key={key}
             position={{ lat: lat, lng: lng }}
             clickable={true}
-            onClick={() => console.log(id)}
+            onClick={() => handleGeocoder(lat, lng)}
             image={{
               src: redIcon,
               size: {
