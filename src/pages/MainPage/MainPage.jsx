@@ -12,6 +12,7 @@ const MainPage = () => {
         <LinkButton to="/No2">토글</LinkButton>
         <LinkButton to="/No3">카카오맵</LinkButton>
         <LinkButton to="/No4">AI챗봇</LinkButton>
+        <LinkButton to="/No5">파일 업로드</LinkButton>
       </Wrap>
     </>
   );
