@@ -28,6 +28,8 @@ K-HTML 해커톤 서비스에 사용할 지도를 카카오맵 API를 사용해�
 @chatscope/chat-ui-kit-react를 사용해 채팅 UI를 구성하고, OpenAI API 키를 발급받아 연동하였다.  
 또한, 채팅 기록을 로컬스토리지에 저장해 브라우저 탭을 닫아도 대화 내용이 유지되도록 구현하였다.  
 
-![ijoji](https://github.com/user-attachments/assets/fd892e73-a29b-4d0f-8518-7561dae96bad)
+![ijoji](https://github.com/user-attachments/assets/fd892e73-a29b-4d0f-8518-7561dae96bad)  
 
   
+## No5) 이미지 파일 업로드 + FormData형식으로 POST 요청 보내기
+![upload](https://github.com/user-attachments/assets/679476e7-829e-4a50-9619-6e12f2fbdbbd)
