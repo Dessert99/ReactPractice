@@ -71,13 +71,14 @@ const FileForm = () => {
     const img = e.currentTarget.elements.File_img.files[0]; //폼 안의 <input name="File_img">를 통해 파일 얻기
 
     //폼 데이터 구성
-    formData.append('walktrail', 2);
-    formData.append('location', '테스트 중');
+    formData.append('walktrail', '천장산하늘길');
+    formData.append('location', '하늘길 전망대 앞');
     formData.append('type', '제안');
-    formData.append('category', '도로');
-    formData.append('latitude', 37.5935);
-    formData.append('longitude', 127.0455);
-    formData.append('feedback_content', ' 발판이 고르고 않아 미끄러워요.\n비 오는 날 특히 위험해서 정비가 필요합니다.');
+    formData.append('category', '기타');
+    formData.append('latitude', 37.598);
+    formData.append('longitude', 127.0665);
+    formData.append('feedback_content', '전망 포인트에 포토존 가이드 라인을 설치하면 좋아요.');
+
     formData.append('feedback_image', img); // 이미지 파일
 
     try {

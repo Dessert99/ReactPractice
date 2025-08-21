@@ -5,7 +5,8 @@ import { useState } from 'react';
 import redIcon from '../assets/red.png';
 
 const StyledMap = styled(Map)`
-  width: 90%;
+  width: 50%;
+  height: 50%;
   aspect-ratio: 3/2;
   border-radius: 20px;
 `;

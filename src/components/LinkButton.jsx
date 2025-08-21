@@ -2,8 +2,12 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const MoveButton = styled.button`
-  width: 100px;
-  height: 50px;
+  width: 10rem;
+  height: 5rem;
+  background-color: grey;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 15px;
 `;
 
 const LinkButton = ({ to, children }) => {
