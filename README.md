@@ -1,5 +1,4 @@
-# 다양한 리액트 기능을 연습하는 래포입니다.
-
+# 리액트 낙서장
 ---
 
 ## No1) 가로 스크롤
@@ -19,8 +18,8 @@
 ## No3) 카카오맵 API 실습
 
 K-HTML 해커톤 서비스에 사용할 지도를 카카오맵 API를 사용해서 구현하기로 했다. 이를 위해 카카오에서 제공하는 다양한 기능을 연습해보았다.
+![kak](https://github.com/user-attachments/assets/66c6dc32-fb84-4230-b049-33dd41b1afa8)
 
-<img width="1735" height="748" alt="image" src="https://github.com/user-attachments/assets/afe30352-aa44-4428-a68a-562801587cb5" />
 
 ## No4) Open AI 기반 챗봇 구현  
 
