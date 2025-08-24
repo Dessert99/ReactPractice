@@ -6,7 +6,7 @@ const MoveButton = styled.button`
   height: 5rem;
   background-color: grey;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   border-radius: 15px;
 `;
 
